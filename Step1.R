@@ -20,6 +20,12 @@ print(getwd()) #Check directory
 
 
 # Import dataset
+install.packages("readxl")
 library(readxl)
 Depth_2018_10 <- read_excel("Depth gradient_2018-10.xlsx")
 Data <-Depth_2018_10
+names(Data)
+
+#Check Normality
+hist(Data$`Width1 (cm)`)
+
